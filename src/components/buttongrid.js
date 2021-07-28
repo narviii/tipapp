@@ -92,7 +92,7 @@ function ButtonGrid({ active, setActive, refresh, input, setInput, displayInput,
         onSelect={handleInput}
         value={input}
         onChange={handleInput}
-        className=" outline-none border-2 border-transparent rounded focus:border-red-500 block w-full bg-green-50 h-8 text-gray-500 p-5 text-right" type="text" />
+        className=" outline-none border-2 border-transparent rounded focus:border-green-900 block w-full bg-green-50 h-8 text-gray-500 p-5 text-right" type="text" />
 
     const buttonsMapped = btnArray.map(elem => (
         <Btn
