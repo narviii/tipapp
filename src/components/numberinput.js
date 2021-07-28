@@ -1,38 +1,40 @@
 import { useState } from "react";
 
-function NumberInput({ label, icon, type,value,setValue,refresh }) {
+function NumberInput({ label, icon, type, value, setValue, refresh }) {
     //const [value, setValue] = useState("");
     var isInt = /^\+?\d+$/
 
     let handleChange
     let handleBlur
 
-    const handleBlurFloat = () =>{
-        setValue(parseFloat(value))
+    const handleBlurFloat = () => {
+        if (Number(value)){
+            setValue(parseFloat(value).toFixed(2))
+        }
+        
         refresh()
     }
 
-    const handleBlurInt = () =>{
-        
+    const handleBlurInt = () => {
+
     }
 
     const handleFloat = (e) => {
-        if (!isNaN(e.target.value) && (Number(e.target.value)>0)) {
-            
+        if (!isNaN(e.target.value) && (Number(e.target.value) > 0)) {
+
             setValue(e.target.value)
-        }
-        if (e.target.value === "") {
-            setValue(0)
+        } else if (e.target.value === "") {
+            setValue("")
         }
         refresh()
     }
     const handleInt = (e) => {
-        if (Number.isInteger(Number(e.target.value))&& Number(e.target.value)>0 ) {
+        if (Number.isInteger(Number(e.target.value)) && Number(e.target.value) > 0) {
             setValue(parseInt(e.target.value))
-            
+
         }
         if (e.target.value === "") {
-            setValue(0)
+            setValue("")
         }
         refresh()
     }
@@ -40,7 +42,7 @@ function NumberInput({ label, icon, type,value,setValue,refresh }) {
     if (type === "float") {
         handleChange = handleFloat
         handleBlur = handleBlurFloat
-    }else {
+    } else {
         handleChange = handleInt
         handleBlur = handleBlurInt
     }

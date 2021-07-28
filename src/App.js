@@ -37,6 +37,9 @@ function App() {
       setTipAmount((billValue*active.rate)/peopleNum)
       setTotal(billValue/peopleNum+tipAmount)
 
+    } else {
+      setTipAmount(0)
+      setTotal(0)
     }
     
 
