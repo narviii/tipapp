@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+    .overflow-breakword {
+        overflow-wrap: break-word;
+    }
+    .input-usd {
+        position: relative;
+    }
+    .input-usd:before {
+        position: absolute;
+        top: 0;
+        content:"€";
+    }
+    .w-200 {
+        width:50rem;
+    }
+}
