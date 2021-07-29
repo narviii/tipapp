@@ -5,6 +5,10 @@ module.exports = {
         extend: {
             fontFamily: {
                 'monoGoogle': ['Space Mono']
+            },
+            spacing: {
+                
+                '200': '50rem',
             }
 
 

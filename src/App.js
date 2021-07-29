@@ -54,8 +54,8 @@ function App() {
         </h1>
       </div>
 
-      <div className="bg-white w-200 h-96 mx-auto rounded-3xl shadow-xl max-w-7xl flex p-6">
-        <div className="w-1/2 h-full rounded-lg flex flex-col justify-between p-6">
+      <div className="bg-white w-5/6 md:w-200 md:h-96 mx-auto rounded-3xl shadow-xl max-w-7xl flex md:flex-row flex-col  p-6">
+        <div className="md:w-1/2 w-full h-full rounded-lg flex flex-col justify-between p-6">
           <NumberInput
             refresh={refresh}
             value={billValue}
