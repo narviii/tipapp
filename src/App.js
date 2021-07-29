@@ -47,15 +47,15 @@ function App() {
   }
 
   return (
-    <div className="h-screen font-monoGoogle bg-green-100 flex flex-col justify-center">
+    <div className="h-screen font-monoGoogle bg-green-100 flex  p-6 flex-col justify-center">
       <div className="mx-auto max-w-xs w-24 m-6">
         <h1 className="text-center text-4xl text-green-800 overflow-breakword ">
           SPLITTER
         </h1>
       </div>
 
-      <div className="bg-white w-5/6 md:w-200 md:h-96 mx-auto rounded-3xl shadow-xl max-w-7xl flex md:flex-row flex-col  p-6">
-        <div className="md:w-1/2 w-full h-full rounded-lg flex flex-col justify-between p-6">
+      <div className="bg-white w-full  md:w-200 md:h-96 mx-auto rounded-3xl shadow-xl max-w-7xl flex md:flex-row flex-col  p-6">
+        <div className="md:w-1/2 w-full h-full rounded-lg md:pr-6 flex flex-col justify-between">
           <NumberInput
             refresh={refresh}
             value={billValue}
